@@ -1,0 +1,6 @@
+@S.Integration_Technologies_HostAddress = http://localhost:5156
+
+GET {{S.Integration_Technologies_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
