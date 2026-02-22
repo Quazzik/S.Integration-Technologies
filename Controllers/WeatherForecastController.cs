@@ -1,3 +1,4 @@
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 
 namespace S.Integration_Technologies.Controllers;
@@ -28,5 +29,11 @@ public class WeatherForecastController : ControllerBase
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
             .ToArray();
+    }
+
+    [HttpPost(Name = "PostWeatherForecast")]
+    public string Post(int a)
+    {
+        return "your number is " + a.ToString();
     }
 }
