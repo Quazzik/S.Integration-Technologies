@@ -69,4 +69,18 @@ public class ArticleSearchService
 
         return response.Documents;
     }
+
+    public async Task<bool> IsExistAsync(int id)
+    {
+        var response = await _client.SearchAsync<ArticleDocument>(s => s
+            .Indices("articles")
+            .Query(q => q
+                .Match(m => m
+                    .Field(f => f.Id)
+                    .Query(id)
+                )
+            )
+        );
+        return response.Documents.Any();
+    }
 }

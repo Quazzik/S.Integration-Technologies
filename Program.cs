@@ -18,6 +18,7 @@ builder.Services.AddSingleton(new ConnectionFactory
 });
 
 builder.Services.AddSingleton<RabbitMqProducerService>();
+builder.Services.AddHostedService<RabbitMqConsumerService>();
 
 var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"))
     .Authentication(new BasicAuthentication("elastic", "elastic_password"))
@@ -26,7 +27,7 @@ var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"))
 // Клиент регистрируется как Singleton
 builder.Services.AddSingleton(new ElasticsearchClient(settings));
 
-builder.Services.AddScoped<ArticleSearchService>();
+builder.Services.AddSingleton<ArticleSearchService>();
 
 var app = builder.Build();
 

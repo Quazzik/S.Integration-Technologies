@@ -8,16 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb633bd4-36c0-4e15-8c41-edefd17ecf6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Services/RabbitMqConsumerService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/BrokerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/BrokerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/SearchController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/SearchController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S.Integration-Technologies.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/S.Integration-Technologies.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ArticleSearchService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ArticleSearchService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/RabbitMqProducerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/RabbitMqProducerService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq/0000000000000001.wal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq/0000000000000002.wal" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq/0000000000000002.wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq/meta.dets" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/coordination/rabbit@rabbitmq/meta.dets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/queues/BBLCNP76WH2IH6NPR6C5X3XK/0.qi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L/queues/BBLCNP76WH2IH6NPR6C5X3XK/0.qs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/quorum/rabbit@rabbitmq/0000000000000001.wal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/rabbit_serial" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/mnesia/rabbit@rabbitmq/rabbit_serial" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +44,12 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29f166e5225c456056e0c9686d3ecc152d3e6c349acb3b8875b8d9beecae2c7/ElasticsearchClient.g.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/443b4eae8d5bbbfb3fd5b194232f1be77e95094f8a296401bdbaefdd9ad2a11/BulkRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/BrokerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/SearchController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/ArticleDocument.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/ArticleSearchService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/RabbitMQConsumerService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/RabbitMqConsumerService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/RabbitMqProducerService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -67,25 +68,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.S.Integration-Technologies: http.executor": "Debug",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "PR2-RabbitMQ",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.S.Integration-Technologies: http.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;PR2-RabbitMQ&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.S.Integration-Technologies: http">
     <configuration name="S.Integration-Technologies: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/S.Integration-Technologies.csproj" />

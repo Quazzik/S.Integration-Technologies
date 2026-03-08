@@ -43,7 +43,6 @@ public class RabbitMqProducerService(ConnectionFactory connectionFactory)
 
     public async Task SendAsync(ArticleDocument document)
     {
-        
         var message = JsonSerializer.Serialize(document);
         if (_channel is null)
         {

@@ -47,4 +47,11 @@ public class SearchController(ArticleSearchService service) : ControllerBase
         var result = await service.AnySearchAsync(q);
         return Ok(result);
     }
+    
+    [HttpGet("Id Search")]
+    public async Task<IActionResult> IdSearch([FromQuery] int id)
+    {
+        var result = await service.IsExistAsync(id);
+        return Ok(result);
+    }
 }
