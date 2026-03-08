@@ -1,5 +1,7 @@
 using System.Text;
+using System.Text.Json;
 using RabbitMQ.Client;
+using S.Integration_Technologies.Models;
 
 namespace S.Integration_Technologies.Services;
 
@@ -39,8 +41,10 @@ public class RabbitMqProducerService(ConnectionFactory connectionFactory)
         );
     }
 
-    public async Task SendAsync(string message)
+    public async Task SendAsync(ArticleDocument document)
     {
+        
+        var message = JsonSerializer.Serialize(document);
         if (_channel is null)
         {
             await InitializeAsync();

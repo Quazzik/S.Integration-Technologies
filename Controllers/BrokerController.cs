@@ -1,4 +1,6 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
+using S.Integration_Technologies.Models;
 using S.Integration_Technologies.Services;
 
 namespace S.Integration_Technologies.Controllers;
@@ -8,16 +10,15 @@ namespace S.Integration_Technologies.Controllers;
 
 public class BrokerController(RabbitMqProducerService rabbitMqProducer) : Controller
 {
-    [HttpGet("send")]
-    public async Task<IActionResult> Send()
+    [HttpPost("Send")]
+    public async Task<IActionResult> Send([FromBody] ArticleDocument document)
     {
-        await rabbitMqProducer.SendAsync("Message from producer");
+        try
+        {
+            await rabbitMqProducer.SendAsync(document);
+        }
+        catch(Exception ex) {return BadRequest(ex.Message);}
 
         return Ok("Message successfully sent");
     } 
-    
-//    public IActionResult Index()
-//    {
-//        return View();
-//    }
 }

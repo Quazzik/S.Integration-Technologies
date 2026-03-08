@@ -7,7 +7,7 @@ namespace S.Integration_Technologies.Controllers;
 [Route("api/search")]
 public class SearchController(ArticleSearchService service) : ControllerBase
 {
-    [HttpGet("index")]
+    [HttpGet("Index")]
     public async Task<IActionResult> Index()
     {
         var documents = new[]
