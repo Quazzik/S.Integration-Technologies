@@ -1,17 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using S.Integration_Technologies.Models;
 
+namespace S.Integration_Technologies.Controllers;
+
 [ApiController]
 [Route("api/search")]
-public class SearchController : ControllerBase
+public class SearchController(ArticleSearchService service) : ControllerBase
 {
-    private readonly ArticleSearchService _service;
-
-    public SearchController(ArticleSearchService service)
-    {
-        _service = service;
-    }
-
     [HttpGet("index")]
     public async Task<IActionResult> Index()
     {
@@ -28,28 +23,28 @@ public class SearchController : ControllerBase
                 Header = "Я не смог придумать такую запись"}
         };
 
-        await _service.IndexAsync(documents);
+        await service.IndexAsync(documents);
         return Ok();
     }
 
     [HttpGet("Content Search")]
     public async Task<IActionResult> ContentSearch([FromQuery] string q)
     {
-        var result = await _service.ContentSearchAsync(q);
+        var result = await service.ContentSearchAsync(q);
         return Ok(result);
     }
 
     [HttpGet("Header Search")]
     public async Task<IActionResult> HeaderSearch([FromQuery] string q)
     {
-        var result = await _service.HeaderSearchAsync(q);
+        var result = await service.HeaderSearchAsync(q);
         return Ok(result);
     }
     
     [HttpGet("Any Search")]
     public async Task<IActionResult> AnySearch([FromQuery] string q)
     {
-        var result = await _service.AnySearchAsync(q);
+        var result = await service.AnySearchAsync(q);
         return Ok(result);
     }
 }

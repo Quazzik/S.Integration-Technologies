@@ -1,11 +1,23 @@
 using Elastic.Clients.Elasticsearch;
 using Elastic.Transport;
+using RabbitMQ.Client;
+using S.Integration_Technologies.Services;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
+
+builder.Services.AddSingleton(new ConnectionFactory
+{
+    HostName = "localhost",
+    Port = 5672,
+    UserName = "rabbituser",
+    Password = "rabbitpassword"
+});
+
+builder.Services.AddSingleton<RabbitMqProducerService>();
 
 var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"))
     .Authentication(new BasicAuthentication("elastic", "elastic_password"))
