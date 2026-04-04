@@ -1,23 +1,26 @@
+using System.Text.Json;
 using Confluent.Kafka;
+using S.Integration_Technologies.Models;
 
 namespace S.Integration_Technologies.Services;
 
 public class KafkaProducerService
 {
-    private readonly IProducer<Null, string> _producer;
+    private readonly IProducer<string, string> _producer;
 
     public KafkaProducerService(ProducerConfig config)
     {
-        _producer = new ProducerBuilder<Null, string>(config).Build();
+        _producer = new ProducerBuilder<string, string>(config).Build();
     }
 
-    public async Task ProduceAsync(string topic, string message)
+    public async Task PublishAsync(ArticleDocument article)
     {
-        var kafkaMessage = new Message<Null, string>
-        {
-            Value = message
-        };
+        var json = JsonSerializer.Serialize(article);
 
-        await _producer.ProduceAsync(topic, kafkaMessage);
+        await _producer.ProduceAsync("articles", new Message<string, string>
+        {
+            Key = article.Id.ToString(),
+            Value = json
+        });
     }
 }

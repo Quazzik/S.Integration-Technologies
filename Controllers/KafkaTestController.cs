@@ -1,5 +1,6 @@
 
 using Microsoft.AspNetCore.Mvc;
+using S.Integration_Technologies.Models;
 using S.Integration_Technologies.Services;
 
 namespace S.Integration_Technologies.Controllers;
@@ -14,15 +15,13 @@ public class KafkaTestController : ControllerBase
     {
         _kafkaProducer = kafkaProducer;
     }
-
-    [HttpGet("Test Send")]
-    public async Task<IActionResult> Send()
+    
+    [HttpPost("Kafka send message")]
+    public async Task<IActionResult> CreateArticle([FromBody] ArticleDocument article)
     {
-        await _kafkaProducer.ProduceAsync(
-            topic: "demo-topic",
-            message: "Hello from ASP.NET Core"
-        );
+        await _kafkaProducer.PublishAsync(article);
 
-        return Ok("Message sent to Kafka");
+        return Accepted();
     }
+    
 }

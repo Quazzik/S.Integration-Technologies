@@ -8,15 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb633bd4-36c0-4e15-8c41-edefd17ecf6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/KafkaTestController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Services/KafkaProducerService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-ui.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/KafkaToElasticHostedService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/KafkaTestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/KafkaTestController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S.Integration-Technologies.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/S.Integration-Technologies.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/S.Integration-Technologies.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/S.Integration-Technologies.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/KafkaProducerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/KafkaProducerService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +39,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d55abdf8d0944584bdd04ffd201594cc6e800/fb/c8e8d4fb/IProducer`2.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/29f166e5225c456056e0c9686d3ecc152d3e6c349acb3b8875b8d9beecae2c7/ElasticsearchClient.g.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/59cd7a17e4fcffda1ba3687b386939b4e155ba482f85c8fe9993bc8373d7f93/ApiBehaviorApplicationModelProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Controllers/KafkaController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Controllers/KafkaTestController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/SearchController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/ArticleDocument.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/ArticleSearchService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/KafkaProducerService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Services/KafkaToElasticHostedService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -131,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1771732905921</updated>
       <workItem from="1771732907556" duration="6598000" />
-      <workItem from="1775272791746" duration="3293000" />
+      <workItem from="1775272791746" duration="5349000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
