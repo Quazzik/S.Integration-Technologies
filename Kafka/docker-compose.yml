@@ -12,7 +12,7 @@ services:
       - './config-ui.yaml:/etc/kafkaui/dynamic_config.yaml'
     networks:
       - kafkanet
-
+  
   kafka:
     image: apache/kafka:3.9.1
     restart: always
@@ -36,46 +36,35 @@ services:
     networks:
       - kafkanet
   
-  elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:9.2.3
-    container_name: elasticsearch
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=true
-      - ELASTIC_PASSWORD=elastic_password
-      - xpack.security.http.ssl.enabled=false
-      - xpack.security.transport.ssl.enabled=false
-      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+  kafka-connect:
+    build: ./kafka-connect/
+    container_name: kafka-connect
     ports:
-      - "9200:9200"
-    volumes:
-      - esdata:/usr/share/elasticsearch/data
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    networks:
-      - elastic
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana:9.2.3
-    container_name: kibana
+      - "8083:8083"
+    environment:
+      CONNECT_BOOTSTRAP_SERVERS: "kafka:9092"
+      CONNECT_REST_PORT: 8083
+      CONNECT_REST_ADVERTISED_HOST_NAME: "kafka-connect"
+      CONNECT_GROUP_ID: "kafka-connect-elastic"
+      CONNECT_CONFIG_STORAGE_TOPIC: "__connect-configs"
+      CONNECT_OFFSET_STORAGE_TOPIC: "__connect-offsets"
+      CONNECT_STATUS_STORAGE_TOPIC: "__connect-status"
+      CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_KEY_CONVERTER: "org.apache.kafka.connect.storage.StringConverter"
+      CONNECT_VALUE_CONVERTER: "org.apache.kafka.connect.json.JsonConverter"
+      CONNECT_VALUE_CONVERTER_SCHEMAS_ENABLE: "false"
+      CONNECT_PLUGIN_PATH: "/usr/share/java,/usr/share/confluent-hub-components"
     depends_on:
-      - elasticsearch
-    environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-      - ELASTICSEARCH_USERNAME=kibana_system
-      - ELASTICSEARCH_PASSWORD=kibana_password
-    ports:
-      - "5601:5601"
+      - kafka
     networks:
+      - kafkanet
       - elastic
-
-volumes:
-  esdata:
 
 networks:
-  elastic:
-    driver: bridge
   kafkanet:
     name: kafkanet
+  elastic:
+    name: elastic
+    external: true

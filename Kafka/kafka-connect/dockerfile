@@ -1,0 +1,5 @@
+FROM confluentinc/cp-kafka-connect:7.7.7
+
+# Устанавка Elasticsearch Sink Connector
+# https://www.confluent.io/hub/confluentinc/kafka-connect-elasticsearch
+RUN confluent-hub install --no-prompt confluentinc/kafka-connect-elasticsearch:15.1.0
