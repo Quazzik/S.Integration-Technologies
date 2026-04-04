@@ -1,5 +1,7 @@
+using Confluent.Kafka;
 using Elastic.Clients.Elasticsearch;
 using Elastic.Transport;
+using S.Integration_Technologies.Services;
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +17,14 @@ var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"))
 builder.Services.AddSingleton(new ElasticsearchClient(settings));
 
 builder.Services.AddScoped<ArticleSearchService>();
+
+var bootstrapServers = builder.Configuration.GetValue<string>("Kafka:BootstrapServers");
+
+builder.Services.AddSingleton(new ProducerConfig
+{
+    BootstrapServers = bootstrapServers
+});
+builder.Services.AddSingleton<KafkaProducerService>();
 
 var app = builder.Build();
 
