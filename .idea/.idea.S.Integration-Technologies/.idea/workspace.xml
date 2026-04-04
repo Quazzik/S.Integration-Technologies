@@ -8,12 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb633bd4-36c0-4e15-8c41-edefd17ecf6a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Services/KafkaToElasticHostedService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/KafkaTestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/KafkaTestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/S.Integration-Technologies.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/S.Integration-Technologies.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/KafkaProducerService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/KafkaProducerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Elastic8/config-ui.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/S.Integration-Technologies.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/S.Integration-Technologies.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "PR2-Kafka",
+    "git-widget-placeholder": "PR3",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
