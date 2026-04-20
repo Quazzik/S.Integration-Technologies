@@ -61,10 +61,14 @@ services:
     networks:
       - kafkanet
       - elastic
+      - mariadbnet
 
 networks:
   kafkanet:
     name: kafkanet
   elastic:
     name: elastic
+    external: true
+  mariadbnet:
+    name: mariadbnet
     external: true

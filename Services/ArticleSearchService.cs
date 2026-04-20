@@ -4,7 +4,7 @@ using S.Integration_Technologies.Models;
 public class ArticleSearchService
 {
     private readonly ElasticsearchClient _client;
-
+    private readonly string _indiceName="articles";
     public ArticleSearchService(ElasticsearchClient client)
     {
         _client = client;
@@ -14,7 +14,7 @@ public class ArticleSearchService
     {
         // Bulk-индексация - предпочтительный способ записи
         var response = await _client.BulkAsync(b => b
-            .Index("articles")
+            .Index(_indiceName)
             .IndexMany(documents)
         );
 
@@ -27,7 +27,7 @@ public class ArticleSearchService
     public async Task<IReadOnlyCollection<ArticleDocument>> ContentSearchAsync(string query)
     {
         var response = await _client.SearchAsync<ArticleDocument>(s => s
-            .Indices("articles")
+            .Indices(_indiceName)
             .Query(q => q
                 .Match(m => m
                     .Field(f => f.Content)
@@ -42,7 +42,7 @@ public class ArticleSearchService
     public async Task<IReadOnlyCollection<ArticleDocument>> HeaderSearchAsync(string query)
     {
         var response = await _client.SearchAsync<ArticleDocument>(s => s
-            .Indices("articles")
+            .Indices(_indiceName)
             .Query(q => q
                 .Match(m => m
                     .Field(f => f.Header)
@@ -58,7 +58,7 @@ public class ArticleSearchService
     {
         // Выполняем поиск
         var response = await _client.SearchAsync<ArticleDocument>(s => s
-            .Index("articles")
+            .Index(_indiceName)
             .Query(q => q
                 .MultiMatch(m => m
                         .Query(query)

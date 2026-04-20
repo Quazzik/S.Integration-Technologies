@@ -1,6 +1,8 @@
 using Confluent.Kafka;
 using Elastic.Clients.Elasticsearch;
 using Elastic.Transport;
+using Microsoft.EntityFrameworkCore;
+using S.Integration_Technologies.Database;
 using S.Integration_Technologies.Services;
 using Scalar.AspNetCore;
 
@@ -29,6 +31,16 @@ builder.Services.AddSingleton(new ProducerConfig
     BootstrapServers = bootstrapServers
 });
 builder.Services.AddSingleton<KafkaProducerService>();
+
+#endregion
+
+#region MariaDb
+
+var connectionString = builder.Configuration.GetConnectionString("ArticleDbConnection");
+builder.Services.AddDbContext<ArticleDbContext>(options =>
+{
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+});
 
 #endregion
 

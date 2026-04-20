@@ -8,10 +8,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb633bd4-36c0-4e15-8c41-edefd17ecf6a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Database/ArticleDbContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.S.Integration-Technologies/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/KafkaTestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/KafkaTestController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Elastic8/config-ui.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka/kafka-connect/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka/kafka-connect/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/ArticleDocument.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/ArticleDocument.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/S.Integration-Technologies.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/S.Integration-Technologies.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/ArticleSearchService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/ArticleSearchService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +49,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/59cd7a17e4fcffda1ba3687b386939b4e155ba482f85c8fe9993bc8373d7f93/ApiBehaviorApplicationModelProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/KafkaTestController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Controllers/SearchController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Database/ArticleDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Models/ArticleDocument.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/ArticleSearchService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Services/KafkaProducerService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Services/KafkaToElasticHostedService.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -72,13 +79,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "PR3",
+    "git-widget-placeholder": "PR4",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -130,6 +138,8 @@
       <updated>1771732905921</updated>
       <workItem from="1771732907556" duration="6598000" />
       <workItem from="1775272791746" duration="5349000" />
+      <workItem from="1776666607702" duration="2034000" />
+      <workItem from="1776668824111" duration="9364000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -147,6 +157,22 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="dotnet:Confluent.Kafka" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init" />
