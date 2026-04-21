@@ -15,7 +15,7 @@ builder.Services.AddOpenApi();
 
 var settings = new ElasticsearchClientSettings(new Uri("http://localhost:9200"))
     .Authentication(new BasicAuthentication("elastic", "elastic_password"))
-    .DefaultIndex("articles");
+    .DefaultIndex("cdc.article.articledocuments");
 builder.Services.AddSingleton(new ElasticsearchClient(settings));
 
 builder.Services.AddScoped<ArticleSearchService>();
